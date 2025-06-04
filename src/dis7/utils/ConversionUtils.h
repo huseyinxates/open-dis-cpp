@@ -61,6 +61,20 @@ public:
      */
     static double getRollFromEuler(double lat, double lon, double psi, double theta, double phi);
 
+    /**
+     * @brief Convert Earth-Centered Earth-Fixed coordinates to latitude,
+     * longitude and altitude.
+     * @param x ECEF X coordinate in meters
+     * @param y ECEF Y coordinate in meters
+     * @param z ECEF Z coordinate in meters
+     * @param lat Latitude result expressed in radians
+     * @param lon Longitude result expressed in radians
+     * @param alt Altitude result in meters
+     * @return true if the conversion was successful
+     */
+    static bool ecefToLla(double x, double y, double z,
+                          double &lat, double &lon, double &alt);
+
     static double radToDeg(double rad) { return rad * (180 / PI); };
     static double degToRad(double deg) { return deg * (PI / 180); };
 };
