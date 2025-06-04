@@ -98,6 +98,15 @@ To quickly clean up CMake output files, use `git clean -xdf`.
 
 The latest doxygen docs for the Open DIS master branch can be found [here](https://codedocs.xyz/open-dis/open-dis-cpp/).
 
+## Coordinate Conversion Utilities
+
+The `ConversionUtils` helper class offers basic functions for converting
+between different coordinate systems. In addition to the existing Euler angle
+helpers, it now provides `ecefToLla` for converting Earth-Centered
+Earth-Fixed (ECEF) coordinates to latitude, longitude and altitude. The
+function returns the latitude and longitude in radians and altitude in meters
+and reports failure when supplied with non-finite input values.
+
 ## SDL2 and SDL2_net Install Instructions
 
 ### Linux Package Managers

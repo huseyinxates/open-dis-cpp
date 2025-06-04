@@ -4,6 +4,7 @@ set(unit_test_suite_src
   IncomingMessageTests.cpp
   PduMarshallTests.cpp
   PduUtils.cpp
+  ConversionUtilsTests.cpp
 )
 
 add_executable(
@@ -11,7 +12,7 @@ add_executable(
   ${unit_test_suite_src}
 )
 
-target_link_libraries(UnitTestSuite OpenDIS6)
+target_link_libraries(UnitTestSuite OpenDIS6 OpenDIS7)
 target_include_directories(UnitTestSuite PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_test(NAME UnitTestSuite
