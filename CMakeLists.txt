@@ -44,6 +44,7 @@ add_subdirectory(cmake)
 # Build example applications
 if(BUILD_EXAMPLES)
   add_subdirectory(examples)
+  add_subdirectory(examples7)
 endif()
 
 # Build tests
